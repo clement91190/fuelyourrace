@@ -11,7 +11,7 @@
     "clean": "rm -rf .next node_modules",
     "preinstall": "npx only-allow pnpm",
     "test": "jest"
-  },
+},
   "dependencies": {
     "@mantine/core": "^7.17.3",
     "@mantine/dates": "^7.17.3",
