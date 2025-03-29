@@ -79,4 +79,47 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## TODO 
 - deploy with github actions and vercel cli 
-- 
+
+## Deployment
+
+### Automated Deployment with GitHub Actions
+
+The project is configured to automatically deploy to Vercel when changes are pushed to the `main` branch. To set this up:
+
+1. Create a new project on [Vercel](https://vercel.com)
+2. Add the following secrets to your GitHub repository:
+   - `VERCEL_TOKEN`: Your Vercel authentication token
+   - `ORG_ID`: Your Vercel organization ID
+   - `PROJECT_ID`: Your Vercel project ID
+
+You can find these values in your Vercel project settings.
+
+### Manual Deployment
+
+To deploy manually using the Vercel CLI:
+
+1. Install the Vercel CLI:
+```bash
+pnpm i -g vercel
+```
+
+2. Login to Vercel:
+```bash
+vercel login
+```
+
+3. Deploy the project:
+```bash
+vercel
+```
+
+For production deployment:
+```bash
+vercel --prod
+```
+
+### Environment Variables
+
+Make sure to set up the following environment variables in your Vercel project:
+- `NEXT_PUBLIC_API_URL`: Your API URL
+- Add any other environment variables your application needs 

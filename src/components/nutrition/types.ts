@@ -22,9 +22,9 @@ export type DisplayMode = 'rate' | 'total';
 
 export interface NutritionControlsProps {
   viewMode: ViewMode;
-  setViewMode: (mode: ViewMode) => void;
+  setViewMode: (newMode: ViewMode) => void;
   selectedMetric: MetricType;
-  setSelectedMetric: (metric: MetricType) => void;
+  setSelectedMetric: (newMetric: MetricType) => void;
   displayMode: DisplayMode;
-  setDisplayMode: (mode: DisplayMode) => void;
+  setDisplayMode: (newMode: DisplayMode) => void;
 } 

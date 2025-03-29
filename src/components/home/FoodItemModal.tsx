@@ -1,16 +1,15 @@
-import { FC, useEffect } from 'react';
-import { Modal, TextInput, NumberInput, Stack, Group, Button, Select, Textarea } from '@mantine/core';
+import { useEffect } from 'react';
+import { Modal, TextInput, NumberInput, Stack, Group, Button, Select } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { FoodItem, FoodCategory } from '@/types';
 
 interface FoodItemModalProps {
   opened: boolean;
   onClose: () => void;
-  item?: FoodItem;
   onSave: (item: FoodItem) => void;
 }
 
-export function FoodItemModal({ opened, onClose, item, onSave }: FoodItemModalProps) {
+export function FoodItemModal({ opened, onClose, onSave }: FoodItemModalProps) {
   const form = useForm({
     initialValues: {
       name: '',
@@ -19,6 +18,7 @@ export function FoodItemModal({ opened, onClose, item, onSave }: FoodItemModalPr
       carbs: 0,
       proteins: 0,
       sodium: 0,
+      caffeine: 0,
       servingSize: '',
       description: '',
     },
@@ -28,39 +28,24 @@ export function FoodItemModal({ opened, onClose, item, onSave }: FoodItemModalPr
       carbs: (value) => (value < 0 ? 'Carbs cannot be negative' : null),
       proteins: (value) => (value < 0 ? 'Proteins cannot be negative' : null),
       sodium: (value) => (value < 0 ? 'Sodium cannot be negative' : null),
+      caffeine: (value) => (value < 0 ? 'Caffeine cannot be negative' : null),
       servingSize: (value) => (!value ? 'Serving size is required' : null),
     },
   });
-
-  useEffect(() => {
-    if (item) {
-      form.setValues({
-        name: item.name,
-        category: item.category,
-        calories: item.nutritionFacts.calories,
-        carbs: item.nutritionFacts.carbs,
-        proteins: item.nutritionFacts.proteins,
-        sodium: item.nutritionFacts.sodium,
-        servingSize: item.servingSize,
-        description: item.description || '',
-      });
-    } else {
-      form.reset();
-    }
-  }, [item]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const values = form.values;
     const newItem: FoodItem = {
-      id: item?.id || `food-item-${Date.now()}`,
+      id: `food-item-${Date.now()}`,
       name: values.name,
       category: values.category,
       nutritionFacts: {
         calories: values.calories,
         carbs: values.carbs,
         proteins: values.proteins,
-        sodium: values.sodium
+        sodium: values.sodium,
+        caffeine: values.caffeine
       },
       servingSize: values.servingSize,
       description: values.description
@@ -74,7 +59,7 @@ export function FoodItemModal({ opened, onClose, item, onSave }: FoodItemModalPr
     <Modal
       opened={opened}
       onClose={onClose}
-      title={item ? 'Edit Food Item' : 'Add Food Item'}
+      title="Add Food Item"
       size="md"
     >
       <form onSubmit={handleSubmit}>
@@ -134,6 +119,14 @@ export function FoodItemModal({ opened, onClose, item, onSave }: FoodItemModalPr
             {...form.getInputProps('sodium')}
           />
 
+          <NumberInput
+            label="Caffeine (mg)"
+            placeholder="e.g., 0"
+            required
+            min={0}
+            {...form.getInputProps('caffeine')}
+          />
+
           <TextInput
             label="Serving Size"
             placeholder="e.g., 40g"
@@ -143,7 +136,7 @@ export function FoodItemModal({ opened, onClose, item, onSave }: FoodItemModalPr
 
           <Group justify="flex-end" mt="md">
             <Button variant="light" onClick={onClose}>Cancel</Button>
-            <Button type="submit">{item ? "Update Food Item" : "Add Food Item"}</Button>
+            <Button type="submit">Add Food Item</Button>
           </Group>
         </Stack>
       </form>

@@ -8,10 +8,9 @@ import { DistanceUnit, ElevationUnit, PaceUnit } from '@/types/settings';
 import { useState } from 'react';
 import { 
   calculateSegmentDetails, 
-  calculateEstimatedTime, 
-  calculatePace,
-  parseTime,
-  formatTime
+  calculateEstimatedTime,
+  formatTime,
+  parseTime
 } from '@/utils/raceCalculations';
 import {
   convertDistance,
