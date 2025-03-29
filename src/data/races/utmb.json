@@ -1,0 +1,22 @@
+{
+  "id": "utmb",
+  "name": "UTMB®",
+  "totalDistance": 171.5,
+  "totalElevationGain": 10000,
+  "totalElevationLoss": 10000,
+  "startLocation": "Chamonix",
+  "finishLocation": "Chamonix",
+  "startElevation": 1035,
+  "aidStations": [
+    {
+      "id": "start",
+      "name": "Start Line",
+      "distanceFromStart": 0,
+      "elevationFromStart": 0,
+      "currentElevation": 1035,
+      "estimatedTimeFromStart": "00:00:00",
+      "assistanceAllowed": true,
+      "foodItems": []
+    }
+  ]
+} 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="coureur.xsl.php"?><d rech="1000"><courses><c id="100m" n="100M" nc="100M" /><c id="100k" n="100K" nc="100K" /><c id="50k" n="50K" nc="50K" /><c id="25k" n="25K" nc="25K" /></courses>		  <fiche doss="1000" c="100k" finishc="1"  >
+						<identite nom="SCHIDE"
+			  prenom="Katie"			  cat="20-34W"
+			  sx="F"
+			  descat="20-34"
+			  club=""			  			  			  cid="671487"
+			  				  nat="United States of america"
+				  cio="USA" a2="US" a3="USA" 			  			  				  				  ville="Gardiner" pays=""
+			  			   ph="01f83f9a-c69e-4def-9959-0fa63aad3390"			   ruri="671487.katie.schide"			/>
+			<antecedents></antecedents>																																																						<state code="f" clt="6"  cltcat="1" cltsex="1" cltsx="1" />			<prev >
+			  			</prev>
+						<pass>
+			<e idpt="0" date="2024-04-27" tz="-8" hd="05:00:00" jd="6" tps="00:00:00"  clt="-" tn="0" tnd="0" ></e><e idpt="4" ha="06:20:50" ja="6" tps="01:20:50" tn="1.3472222222222" tnd="1.3472222222222" tnp="1.3472222222222" clt="18" ></e><e idpt="12" ha="07:39:11" ja="6" tps="02:39:11" tn="2.6530555555556" tnd="2.6530555555556" tnp="1.3058333333333" clt="15" ></e><e idpt="14" ha="08:36:06" ja="6" tps="03:36:06" tn="3.6016666666667" tnd="3.6016666666667" tnp="0.94861111111111" clt="14" ></e><e idpt="16" ha="09:25:14" ja="6" tps="04:25:14" tn="4.4205555555556" tnd="4.4205555555556" tnp="0.81888888888889" clt="12" ></e><e idpt="18" ha="10:31:21" ja="6" tps="05:31:21" tn="5.5225" tnd="5.5225" tnp="1.1019444444444" clt="10" ></e><e idpt="20" ha="11:50:38" ja="6" tps="06:50:38" tn="6.8438888888889" tnd="6.8438888888889" tnp="1.3213888888889" clt="6" ></e><e idpt="22" ha="12:59:04" ja="6" tps="07:59:04" tn="7.9844444444444" tnd="7.9844444444444" tnp="1.1405555555556" clt="6" ></e><e idpt="24" ha="13:34:00" ja="6" tps="08:34:00" tn="8.5666666666667" tnd="8.5666666666667" tnp="0.58222222222222" clt="6" ></e><e idpt="100" ha="14:10:10" ja="6" tps="09:10:10" tn="9.1694444444444" tnd="9.1694444444444" tnp="0.60277777777778" clt="6" ></e>		  </pass>
+		  
+		  
+		  		  
+		  
+		  <pts><pt idpt="0" n="Start - China Wall" nc="China Wall" km="0" d="0" a="1529" x="50" y="42" px="6" py="21" lon="-120.67675" lat="39.15138" meet="1" /><pt idpt="4" n="Deadwood - 1" nc="Deadwood" km="15.99" d="549" a="1162" x="176" y="73" px="21" py="37" lon="-120.69091" lat="39.07882" meet="1" /><pt idpt="12" n="Deadwood - 2" nc="Deadwood" km="28.75" d="1418" a="1163" x="277" y="73" px="33" py="37" lon="-120.69091" lat="39.07876" meet="1" /><pt idpt="14" n="Michigan Bluff" nc="Michigan B" km="38.2" d="2012" a="1058" x="351" y="82" px="41" py="41" lon="-120.73488" lat="39.04098" /><pt idpt="16" n="Foresthill" nc="Foresthill" km="47.52" d="2369" a="999" x="425" y="87" px="50" py="44" lon="-120.81260" lat="39.02084" /><pt idpt="18" n="Cal 2" nc="Cal 2" km="60.6" d="2776" a="522" x="528" y="127" px="62" py="64" lon="-120.86028" lat="38.97395" meet="1" /><pt idpt="20" n="Drivers Flat" nc="Drivers Fl" km="75.45" d="3304" a="511" x="645" y="128" px="76" py="64" lon="-120.95194" lat="38.96666" /><pt idpt="22" n="Mammoth Bar - 1" nc="Mammoth Ba" km="88.04" d="3589" a="188" x="744" y="156" px="88" py="78" lon="-121.00169" lat="38.91878" meet="1" /><pt idpt="24" n="Confluence" nc="Confluence" km="93.86" d="3791" a="173" x="790" y="157" px="93" py="79" lon="-121.03567" lat="38.91615" meet="1" /><pt idpt="100" n="Finish - Auburn" nc="Auburn" km="100.22" d="4064" a="386" x="840" y="139" px="99" py="70" lon="-121.07034" lat="38.89896" /></pts>		  			<palm cote="801">
+								<e
+					pos="13" cltsx="1" tps="27:31:08"
+					race="le grand raid de la réunion - la diagonale des fous"
+					year="2023" 
+					country="FR" 
+					dist="167"					deniv="9700"					/>
+										<e
+					pos="32" cltsx="2" tps="05:26:25"
+					race="dacia UTMB® mont blanc - occ"
+					year="2023" 
+					country="FR" 
+					dist="55"					deniv="3400"					/>
+										<e
+					pos="17" cltsx="2" tps="16:43:45"
+					race="western states endurance run - western states 100-mile endurance run"
+					year="2023" 
+					country="US" 
+					dist="160"					deniv="5600"					/>
+										<e
+					pos="2" cltsx="1" tps="04:10:34"
+					race="trail des balcons d'azur - tba"
+					year="2023" 
+					country="FR" 
+					dist="45"					deniv="2200"					/>
+										<e
+					pos="5" cltsx="1" tps="06:23:00"
+					race="ecotrail paris® - trail 80km"
+					year="2023" 
+					country="FR" 
+					dist="80"					deniv="1500"					/>
+										<e
+					pos="4" cltsx="1" tps="30:30:42"
+					race="the coastal challenge costa rica - expedition run"
+					year="2023" 
+					country="CR" 
+					dist="236"					deniv="10000"					/>
+										<e
+					pos="22" cltsx="1" tps="23:15:12"
+					race="UTMB® mont blanc - UTMB®"
+					year="2022" 
+					country="FR" 
+					dist="170"					deniv="10100"					/>
+										<e
+					pos="6" cltsx="1" tps="13:06:34"
+					race="val d’aran by UTMB® - cdh"
+					year="2022" 
+					country="ES" 
+					dist="105"					deniv="6100"					/>
+										<e
+					pos="12" cltsx="1" tps="04:08:58"
+					race="greenweez maxi-race - marathon race"
+					year="2022" 
+					country="FR" 
+					dist="40"					deniv="3000"					/>
+										<e
+					pos="52" cltsx="8" tps="27:39:45"
+					race="UTMB® - UTMB®"
+					year="2021" 
+					country="FR" 
+					dist="172"					deniv="10100"					/>
+										<e
+					pos="123" cltsx="19" tps="03:17:18"
+					race="sierre-zinal - sierre-zinal"
+					year="2021" 
+					country="CH" 
+					dist="31"					deniv="2200"					/>
+										<e
+					pos="5" cltsx="1" tps="03:41:48"
+					race="swissalpine davos - k43"
+					year="2021" 
+					country="CH" 
+					dist="43"					deniv="1600"					/>
+										<e
+					pos="17" cltsx="2" tps="14:28:21"
+					race="la sportiva lavaredo ultra trail - lavaredo ultra trail"
+					year="2021" 
+					country="IT" 
+					dist="121"					deniv="5800"					/>
+										<e
+					pos="23" cltsx="1" tps="04:19:12"
+					race="ergysport trail du ventoux - 46 km"
+					year="2021" 
+					country="FR" 
+					dist="46"					deniv="2400"					/>
+										<e
+					pos="23" cltsx="2" tps="08:12:00"
+					race="le porte di pietra - le porte di pietra"
+					year="2021" 
+					country="IT" 
+					dist="73"					deniv="4200"					/>
+					</palm>		</fiche></d>
