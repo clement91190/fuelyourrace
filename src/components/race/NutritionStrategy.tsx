@@ -2,15 +2,14 @@ import { Stack, Text, Group } from '@mantine/core';
 import { useState } from 'react';
 import { useStore } from '@nanostores/react';
 import { raceProfilesStore } from '@/store/raceProfiles';
-import { pantryStore, getAllItems } from '@/store/pantry';
-import { racePlanHistoryStore, addRacePlan } from '@/store/racePlanHistory';
+import { pantryStore } from '@/store/pantry';
 import { settingsStore } from '@/store/settings';
 import { NutritionControls } from '../nutrition/NutritionControls';
 import { NutritionChart } from '../nutrition/NutritionChart';
 import { NutritionTable } from '../nutrition/NutritionTable';
 import { calculateNutritionData } from '../nutrition/calculateNutritionData';
 import { ViewMode, MetricType, DisplayMode } from '../nutrition/types';
-import { RacePlan, FoodItem } from '@/types';
+import { RacePlan } from '@/types';
 
 export function NutritionStrategy() {
   const { profiles, selectedProfileId } = useStore(raceProfilesStore);

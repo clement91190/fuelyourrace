@@ -1,5 +1,5 @@
 import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '@tanstack/react-table';
-import { Table, ActionIcon, Group, Switch, TextInput, NumberInput, Text, Select } from '@mantine/core';
+import { Table, ActionIcon, Group, Switch, TextInput, NumberInput, Text } from '@mantine/core';
 import { IconTrash, IconPlus } from '@tabler/icons-react';
 import { AidStation } from '@/types';
 import { useStore } from '@nanostores/react';
@@ -25,9 +25,9 @@ import { AidStationFoodItems } from './AidStationFoodItems';
 
 interface AidStationsTableProps {
   data: AidStation[];
-  onUpdate: (id: string, updates: Partial<AidStation>) => void;
-  onAdd: (station: AidStation) => void;
-  onRemove: (id: string) => void;
+  onUpdate: (_id: string, _updates: Partial<AidStation>) => void;
+  onAdd: (_station: AidStation) => void;
+  onRemove: (_id: string) => void;
 }
 
 export function AidStationsTable({ data, onUpdate, onAdd, onRemove }: AidStationsTableProps) {

@@ -2,14 +2,14 @@ import { Group, ActionIcon, Text, Stack } from '@mantine/core';
 import { IconPlus, IconMinus } from '@tabler/icons-react';
 import { FoodItemAvatar } from '../ui/FoodItemAvatar';
 import { useStore } from '@nanostores/react';
-import { pantryStore, getAllItems } from '@/store/pantry';
+import { pantryStore } from '@/store/pantry';
 import { AidStation } from '@/types';
 import { SelectFoodItemModal } from './SelectFoodItemModal';
 import { useState } from 'react';
 
 interface AidStationFoodItemsProps {
   station: AidStation;
-  onUpdate: (stationId: string, foodItems: { itemId: string; count: number }[]) => void;
+  onUpdate: (_stationId: string, _foodItems: { itemId: string; count: number }[]) => void;
 }
 
 export function AidStationFoodItems({ station, onUpdate }: AidStationFoodItemsProps) {

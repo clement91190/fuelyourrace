@@ -1,4 +1,4 @@
-import { Group, Select, NumberInput, TextInput, Text, Button } from '@mantine/core';
+import { Group, Select, NumberInput, TextInput, Button } from '@mantine/core';
 import { useState, useEffect, useRef } from 'react';
 import { IconCheck } from '@tabler/icons-react';
 
@@ -6,8 +6,8 @@ interface ValueEditorProps {
   absoluteValue: number | string;
   deltaValue: number | string;
   mode: 'absolute' | 'delta';
-  onModeChange: (mode: 'absolute' | 'delta') => void;
-  onValueChange: (value: number | string) => void;
+  onModeChange: (_mode: 'absolute' | 'delta') => void;
+  onValueChange: (_value: number | string) => void;
   type: 'number' | 'time';
   min?: number;
   step?: number;

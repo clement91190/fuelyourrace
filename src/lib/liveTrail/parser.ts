@@ -6,18 +6,6 @@ interface ParsedLiveTrailData {
   totalElevationGain: number;
 }
 
-interface Point {
-  idpt: string;
-  n: string;
-  km: string;
-  d: string;
-  a: string;
-}
-
-interface Pass {
-  idpt: string;
-  tps: string;
-}
 
 export function parseLiveTrailXml(xml: string): ParsedLiveTrailData {
   const parser = new DOMParser();

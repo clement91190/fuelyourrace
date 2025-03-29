@@ -1,11 +1,11 @@
 import { FoodItem } from '@/types';
-import { Modal, Stack, Group, Button, SimpleGrid } from '@mantine/core';
+import { Modal, Stack, Group, SimpleGrid } from '@mantine/core';
 import { FoodItemAvatar } from '../ui/FoodItemAvatar';
 
 interface SelectFoodItemModalProps {
   opened: boolean;
   onClose: () => void;
-  onSelect: (itemId: string) => void;
+  onSelect: (_itemId: string) => void;
   pantryItems: FoodItem[];
 }
 

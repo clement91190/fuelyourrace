@@ -1,5 +1,5 @@
 import { atom } from 'nanostores';
-import { RaceProfile, AidStation, FoodItem } from '../types';
+import { RaceProfile, AidStation } from '../types';
 import { utmbProfile } from '../data/raceProfiles';
 import { sortAndUpdateStations, updateStationTimes } from '../utils/raceCalculations';
 import Cookies from 'js-cookie';

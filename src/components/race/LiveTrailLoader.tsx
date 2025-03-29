@@ -1,13 +1,12 @@
 import { Button, TextInput, Group, Text, Stack } from '@mantine/core';
 import { useState } from 'react';
-import { AidStation } from '@/types';
 import { parseLiveTrailXml } from '@/lib/liveTrail/parser';
 import { validateLiveTrailUrl } from '@/utils/liveTrailParser';
 
 interface LiveTrailLoaderProps {
-  onLoad: (data: any) => void;
+  onLoad: (_data: any) => void;
   url: string;
-  onUrlChange: (url: string) => void;
+  onUrlChange: (_url: string) => void;
 }
 
 export function LiveTrailLoader({ onLoad, url, onUrlChange }: LiveTrailLoaderProps) {

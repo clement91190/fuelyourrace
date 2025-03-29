@@ -82,13 +82,14 @@ export function Pantry() {
           setModalOpened(false);
           setEditingItem(undefined);
         }}
-        item={editingItem}
-        onSave={(item) => {
+        onSave={(newItem) => {
           if (editingItem) {
-            updateFoodItem(editingItem.id, item);
+            updateFoodItem(editingItem.id, newItem);
           } else {
-            addFoodItem(item);
+            addFoodItem(newItem);
           }
+          setModalOpened(false);
+          setEditingItem(undefined);
         }}
       />
 
@@ -102,7 +103,7 @@ export function Pantry() {
         size="sm"
       >
         <Stack gap="md">
-          <Text>Are you sure you want to delete "{itemToDelete?.name}"? This action cannot be undone.</Text>
+          <Text>Are you sure you want to delete &quot;{itemToDelete?.name}&quot;? This action cannot be undone.</Text>
           <Group justify="flex-end">
             <Button variant="light" onClick={() => {
               setDeleteModalOpened(false);

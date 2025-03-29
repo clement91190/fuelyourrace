@@ -1,6 +1,6 @@
 import { FC, ReactNode, useState } from 'react';
 import { AppShell, Text, useMantineTheme, useMantineColorScheme, Group, Button, ActionIcon } from '@mantine/core';
-import { IconSun, IconMoonStars, IconMountain, IconCookie, IconCalendar, IconSettings, IconHistory } from '@tabler/icons-react';
+import { IconSun, IconMoonStars, IconMountain, IconCookie, IconSettings, IconHistory } from '@tabler/icons-react';
 import { SettingsModal } from '../settings/SettingsModal';
 import { HistoryDrawer } from '../HistoryDrawer';
 

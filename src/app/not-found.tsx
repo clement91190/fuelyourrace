@@ -6,7 +6,7 @@ export default function NotFound() {
     <Container size="md" py="xl">
       <Title order={1} ta="center" mb="md">404 - Page Not Found</Title>
       <Text ta="center" mb="xl">
-        Sorry, we couldn't find the page you're looking for.
+        Sorry, we couldn&apos;t find the page you&apos;re looking for.
       </Text>
       <Group justify="center">
         <Link href="/" passHref>

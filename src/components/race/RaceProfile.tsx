@@ -10,6 +10,7 @@ import { useState, useEffect, useRef } from 'react';
 import { extractRaceName } from '@/utils/liveTrailParser';
 import { notifications } from '@mantine/notifications';
 import { IconDeviceFloppy, IconPlus } from '@tabler/icons-react';
+import { sortAndUpdateStations } from '@/utils/raceCalculations';
 
 export function RaceProfile() {
   const { profiles, selectedProfileId } = useStore(raceProfilesStore);
@@ -80,7 +81,7 @@ export function RaceProfile() {
         });
       }
     }
-  }, [selectedPlanId]);
+  }, [selectedPlanId, selectedProfile?.aidStations]);
 
   const handleTitleChange = (newTitle: string) => {
     if (!selectedProfile) return;
@@ -131,6 +132,13 @@ export function RaceProfile() {
       addAidStation(selectedProfile.id, station);
     });
   };
+
+  useEffect(() => {
+    if (selectedProfile?.aidStations) {
+      const updatedStations = sortAndUpdateStations(selectedProfile.aidStations);
+      updateProfile(selectedProfile.id, { aidStations: updatedStations });
+    }
+  }, [selectedProfile?.aidStations, selectedProfile?.id]);
 
   if (!selectedProfile) return null;
 

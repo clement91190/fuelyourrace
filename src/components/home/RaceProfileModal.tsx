@@ -4,7 +4,7 @@ import { Modal, TextInput, NumberInput, Stack, Group, Button } from '@mantine/co
 interface RaceProfileModalProps {
   opened: boolean;
   onClose: () => void;
-  onSubmit: (data: any) => void;
+  onSubmit: (_data: any) => void;
 }
 
 export const RaceProfileModal: FC<RaceProfileModalProps> = ({ opened, onClose, onSubmit }) => {

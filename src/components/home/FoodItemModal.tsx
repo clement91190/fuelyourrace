@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Modal, TextInput, NumberInput, Stack, Group, Button, Select } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { FoodItem, FoodCategory } from '@/types';
@@ -6,7 +5,7 @@ import { FoodItem, FoodCategory } from '@/types';
 interface FoodItemModalProps {
   opened: boolean;
   onClose: () => void;
-  onSave: (item: FoodItem) => void;
+  onSave: (_item: FoodItem) => void;
 }
 
 export function FoodItemModal({ opened, onClose, onSave }: FoodItemModalProps) {

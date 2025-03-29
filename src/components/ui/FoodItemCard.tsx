@@ -2,12 +2,11 @@ import { Card, Group, Text, Badge, Stack, ActionIcon } from '@mantine/core';
 import { IconDroplet, IconBottle, IconChevronDown, IconChevronUp, IconEdit, IconLock, IconTrash } from '@tabler/icons-react';
 import { FoodItem, FoodCategory } from '@/types';
 import { useState } from 'react';
-import { FoodItemAvatar } from './FoodItemAvatar';
 
 interface FoodItemCardProps {
   item: FoodItem;
-  onEdit?: (item: FoodItem) => void;
-  onDelete?: (item: FoodItem) => void;
+  onEdit?: (_item: FoodItem) => void;
+  onDelete?: (_item: FoodItem) => void;
   isDefault?: boolean;
 }
 
