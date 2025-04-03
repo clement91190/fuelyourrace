@@ -47,7 +47,12 @@ export function FoodItemModal({ opened, onClose, onSave }: FoodItemModalProps) {
         caffeine: values.caffeine
       },
       servingSize: values.servingSize,
-      description: values.description
+      description: values.description,
+      brand: {
+        id: 'custom',
+        name: 'Custom'
+      },
+      isCustom: true
     };
     onSave(newItem);
     form.reset();

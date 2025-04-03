@@ -92,4 +92,41 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  .print-only {
+    display: block;
+  }
+  
+  /* Hide everything except the stickers when printing */
+  body > *:not(.print-only) {
+    display: none;
+  }
+  
+  /* Ensure the stickers are properly laid out */
+  .print-only {
+    padding: 1cm;
+  }
+
+  /* Ensure stickers don't break across pages */
+  .print-only .mantine-Card-root {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Remove any margins and padding that might affect layout */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ensure proper page margins */
+  @page {
+    margin: 1cm;
+  }
 } 

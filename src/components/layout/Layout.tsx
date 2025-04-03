@@ -44,11 +44,9 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
           width: '100%'
         }}>
           <Group gap="xl" style={{ flex: 1 }}>
-            <IconMountain size={24} color={theme.colors.green[6]} />
+            <IconMountain size={24} color="white" />
             <Text size="xl" fw={700} style={{ 
-              background: 'linear-gradient(45deg, #2E7D32, #4CAF50)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              color: 'white',
             }}>
               Fuel Your Race
             </Text>
@@ -57,7 +55,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
           <Group gap="md">
             <Button 
               variant="subtle" 
-              color="green" 
+              color="white" 
               leftSection={<IconCookie size={16} />}
               onClick={() => {}}
             >
@@ -65,7 +63,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
             </Button>
             <Button 
               variant="subtle" 
-              color="green" 
+              color="white" 
               leftSection={<IconHistory size={16} />}
               onClick={() => setHistoryOpened(true)}
             >
@@ -73,14 +71,14 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
             </Button>
             <ActionIcon
               variant="subtle"
-              color="green"
+              color="white"
               onClick={() => setSettingsOpened(true)}
             >
               <IconSettings size={16} />
             </ActionIcon>
             <ActionIcon
               variant="subtle"
-              color="green"
+              color="white"
               onClick={() => setColorScheme(dark ? 'light' : 'dark')}
             >
               {dark ? <IconSun size={16} /> : <IconMoonStars size={16} />}

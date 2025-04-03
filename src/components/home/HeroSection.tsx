@@ -1,24 +1,24 @@
-import { Container, Title, Text, Button, Group, Stack } from '@mantine/core';
-import { IconPlus } from '@tabler/icons-react';
+import { Container, Title, Text, Stack } from '@mantine/core';
 
-interface HeroSectionProps {
-  onCreateRace: () => void;
-}
-
-export function HeroSection({ onCreateRace }: HeroSectionProps) {
+export function HeroSection() {
   return (
-    <Container size="xl" py="xl">
-      <Stack gap="md" align="center" ta="center">
-        <Title order={1} size="3rem">Fuel Your Race</Title>
-        <Text size="xl" c="dimmed" maw={600}>
+    <Container 
+      size="xl" 
+      py="xl" 
+      style={{
+        minHeight: '70vh',
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative',
+      }}
+    >
+      <Stack gap="md" align="center" ta="center" style={{ width: '100%', position: 'relative', zIndex: 1 }}>
+        <Title order={1} size="3.5rem" c="white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+          Fuel Your Race
+        </Title>
+        <Text size="xl" c="white" maw={600} style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}>
           Plan your nutrition strategy for trail races with precision. Track your favorite foods, create race profiles, and optimize your fueling plan.
         </Text>
-        
-        <Group>
-          <Button size="lg" leftSection={<IconPlus size={20} />} onClick={onCreateRace}>
-            Create Race Profile
-          </Button>
-        </Group>
       </Stack>
     </Container>
   );

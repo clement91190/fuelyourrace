@@ -78,7 +78,9 @@ src/
 This project is licensed under the MIT License - see the LICENSE file for details. 
 
 ## TODO 
-- deploy with github actions and vercel cli 
+- Google spreadsheet for library of food + Collapsable "Select the food I have"
+- Share with button (link to share the printed stickers) 
+
 
 ## Deployment
 

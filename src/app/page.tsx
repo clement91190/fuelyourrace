@@ -1,27 +1,27 @@
 'use client';
 
-import { useState } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { HeroSection } from '@/components/home/HeroSection';
 import { FeaturesSection } from '@/components/home/FeaturesSection';
-import { RaceProfileModal } from '@/components/home/RaceProfileModal';
 import { Container } from '@mantine/core';
 import { Pantry } from '../components/Pantry';
 import { RaceProfile } from '../components/race/RaceProfile';
 
 export default function Home() {
-  const [raceModalOpened, setRaceModalOpened] = useState(false);
-
-  const handleCreateRace = (data: any) => {
-    console.log('Creating race profile:', data);
-    setRaceModalOpened(false);
-  };
-
   return (
     <Layout>
-      <HeroSection 
-        onCreateRace={() => setRaceModalOpened(true)}
-      />
+      <div style={{
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hero-bg.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '70vh',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        zIndex: 0,
+      }} />
+      <HeroSection />
       <FeaturesSection />
       
       <Container size="xl" py="xl">
@@ -31,12 +31,6 @@ export default function Home() {
       <Container size="xl" py="xl">
         <RaceProfile />
       </Container>
-      
-      <RaceProfileModal
-        opened={raceModalOpened}
-        onClose={() => setRaceModalOpened(false)}
-        onSubmit={handleCreateRace}
-      />
     </Layout>
   );
 } 

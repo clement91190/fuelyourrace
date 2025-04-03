@@ -6,10 +6,10 @@ interface SelectFoodItemModalProps {
   opened: boolean;
   onClose: () => void;
   onSelect: (_itemId: string) => void;
-  pantryItems: FoodItem[];
+  items: FoodItem[];
 }
 
-export function SelectFoodItemModal({ opened, onClose, onSelect, pantryItems }: SelectFoodItemModalProps) {
+export function SelectFoodItemModal({ opened, onClose, onSelect, items }: SelectFoodItemModalProps) {
   return (
     <Modal
       opened={opened}
@@ -19,7 +19,7 @@ export function SelectFoodItemModal({ opened, onClose, onSelect, pantryItems }: 
     >
       <Stack gap="md">
         <SimpleGrid cols={{ base: 3, sm: 4, md: 5 }} spacing="md">
-          {pantryItems.map((item) => (
+          {items.map((item) => (
             <Group
               key={item.id}
               gap="xs"

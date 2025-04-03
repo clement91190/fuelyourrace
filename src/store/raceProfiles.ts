@@ -4,7 +4,7 @@ import { utmbProfile } from '../data/raceProfiles';
 import { sortAndUpdateStations, updateStationTimes } from '../utils/raceCalculations';
 import Cookies from 'js-cookie';
 import { addRacePlan } from './racePlanHistory';
-import { getAllItems } from './pantry';
+import { foodLibraryStore } from './foodLibrary';
 
 const RACE_PROFILES_COOKIE_KEY = 'race_profiles';
 
@@ -14,7 +14,8 @@ interface RaceProfilesStore {
 }
 
 const createRacePlan = (profile: RaceProfile) => {
-  const allFoodItems = getAllItems();
+  const { library, customItems } = foodLibraryStore.get();
+  const allFoodItems = [...library.items, ...customItems];
   
   return {
     id: profile.name,

@@ -9,19 +9,32 @@ export interface NutritionFacts {
 
 export enum FoodCategory {
   GEL = 'GEL',
-  DRINK = 'DRINK'
+  DRINK = 'DRINK',
+  BAR = 'BAR',
 }
 
+export interface Brand {
+  id: string;
+  name: string;
+  iconUrl?: string;
+}
 
 export interface FoodItem {
   id: string;
   name: string;
-  nutritionFacts: NutritionFacts;
+  brand: Brand;
+  nutritionFacts: NutritionFacts
   category: FoodCategory;
+  isCustom: boolean;
+  isSelected?: boolean;
   servingSize: string;
   description?: string;
 }
 
+export interface FoodLibrary {
+  items: FoodItem[];
+  brands: Brand[];
+}
 
 export interface AidStation {
   id: string;
@@ -35,6 +48,7 @@ export interface AidStation {
     itemId: string;
     count: number;
   }[];
+  notes?: string; // Optional notes for the aid station
 }
 
 export interface RaceProfile {

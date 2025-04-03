@@ -9,8 +9,9 @@ import { AidStation } from '@/types';
 import { useState, useEffect, useRef } from 'react';
 import { extractRaceName } from '@/utils/liveTrailParser';
 import { notifications } from '@mantine/notifications';
-import { IconDeviceFloppy, IconPlus } from '@tabler/icons-react';
+import { IconDeviceFloppy, IconPlus, IconPrinter } from '@tabler/icons-react';
 import { sortAndUpdateStations } from '@/utils/raceCalculations';
+import { PrintAllStickersModal } from './PrintAllStickersModal';
 
 export function RaceProfile() {
   const { profiles, selectedProfileId } = useStore(raceProfilesStore);
@@ -20,6 +21,7 @@ export function RaceProfile() {
   const [liveTrailUrl, setLiveTrailUrl] = useState('');
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const lastSavedStateRef = useRef<string | null>(null);
+  const [printModalOpened, setPrintModalOpened] = useState(false);
 
   // Track changes by comparing current state with last saved state
   useEffect(() => {
@@ -181,6 +183,14 @@ export function RaceProfile() {
           >
             <IconDeviceFloppy size={20} />
           </ActionIcon>
+          <ActionIcon
+            variant="filled"
+            color="blue"
+            size="lg"
+            onClick={() => setPrintModalOpened(true)}
+          >
+            <IconPrinter size={20} />
+          </ActionIcon>
         </Group>
       </Group>
 
@@ -197,6 +207,12 @@ export function RaceProfile() {
       </Card>
 
       <NutritionStrategy />
+
+      <PrintAllStickersModal
+        opened={printModalOpened}
+        onClose={() => setPrintModalOpened(false)}
+        stations={selectedProfile.aidStations}
+      />
 
       <Modal
         opened={showConfirmModal}

@@ -250,6 +250,26 @@ export function AidStationsTable({ data, onUpdate, onAdd, onRemove }: AidStation
         />
       ),
     }),
+    columnHelper.accessor('notes', {
+      header: 'Notes',
+      cell: ({ row, getValue }) => {
+        const isEditing = editingCell?.id === row.original.id && editingCell?.key === 'notes';
+        return isEditing ? (
+          <TextInput
+            defaultValue={getValue() || ''}
+            onBlur={(e) => {
+              onUpdate(row.original.id, { notes: e.target.value });
+              setEditingCell(null);
+            }}
+            autoFocus
+          />
+        ) : (
+          <span onClick={() => setEditingCell({ id: row.original.id, key: 'notes', mode: 'absolute' })}>
+            {getValue() || 'Click to add notes'}
+          </span>
+        );
+      },
+    }),
     columnHelper.display({
       id: 'actions',
       cell: ({ row }) => (
